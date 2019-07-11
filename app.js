@@ -7,7 +7,7 @@ document.getElementById('loan-form').addEventListener('submit', function(e){
     document.getElementById('loading').style.display = 'block';
 
     setTimeout(calculateResults, 1000);
-    
+
     e.preventDefault();
 });
 //Calculate results
@@ -74,7 +74,6 @@ function showError(error){
     setTimeout(clearError, 3000);
 
 }
-
 //Clear error
 function clearError(){
     document.querySelector('.alert').remove();
