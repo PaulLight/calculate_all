@@ -16,28 +16,53 @@
    <body class="bg-dark">
       <div class="container">
          <div class="row">
-            <div class="col-md-6 mx-auto">
+            <div class="col-md-4">
+
+               <!-- GDP Calculation -->
+
                <div class="card card-body text-center mt-5">
-                  <h1 class="heading display-5 pb-3">Loan Calculator</h1>
+                  <h1 class="heading display-5 pb-3">GDP Based on Spending </h1>
                   <form id="loan-form">
+
                      <div class="form-group">
                         <div class="input-group">
                            <span class="input-group-addon">$</span>
-                           <input type="number" class="form-control" id="amount" placeholder="Loan Amount">
+                           <input type="number" class="form-control" id="consumption" placeholder="Consumption ">
                         </div>
                      </div>
+
                      <div class="form-group">
                         <div class="input-group">
-                           <span class="input-group-addon">%</span>
-                           <input type="number" class="form-control" id="interest" placeholder="Interest">
+                           <span class="input-group-addon">$</span>
+                           <input type="number" class="form-control" id="spending" placeholder="Government Spending">
                         </div>
                      </div>
+
                      <div class="form-group">
-                        <input type="number" class="form-control" id="years" placeholder="Years To Repay">
+                        <div class="input-group">
+                           <span class="input-group-addon">$</span>
+                           <input type="number" class="form-control" id="investment" placeholder="Investment">
+                        </div>
                      </div>
+
+                     <div class="form-group">
+                        <div class="input-group">
+                           <span class="input-group-addon">$</span>
+                           <input type="number" class="form-control" id="total_exports" placeholder="Total Exports">
+                        </div>
+                     </div>
+
+                     <div class="form-group">
+                        <div class="input-group">
+                           <span class="input-group-addon">$</span>
+                           <input type="number" class="form-control" id="total_import" placeholder="Total Import">
+                        </div>
+                     </div>
+
                      <div class="forn-group">
                         <input type="submit" value="Calculate" class="btn btn-dark btn-block">
                      </div>
+
                   </form>
                   <!-- LOADER -->
           
@@ -48,22 +73,32 @@
                   <!-- RESULTS -->
                   <div id="results" class="pt-4">
                      <h5>Results</h5>
+                     
+                     <div class="form-group">
+                           <div class="input-group">
+                              <span class="input-group-addon">GDP Based on Spending </span>
+                              <input type="number" class="form-control" id="gdp_spending" disabled>
+                           </div>
+                     </div>
+                     
                      <div class="form-group">
                         <div class="input-group">
-                           <span class="input-group-addon">Monthly Payment</span>
-                           <input type="number" class="form-control" id="monthly-payment" disabled>
+                           <span class="input-group-addon">$</span>
+                           <input type="number" class="form-control" id="LastYearGDP" placeholder="Last Year GDP">
                         </div>
                      </div>
+
                      <div class="form-group">
                         <div class="input-group">
-                           <span class="input-group-addon">Total Payment</span>
-                           <input type="number" class="form-control" id="total-payment" disabled>
+                           <span class="input-group-addon">$</span>
+                           <input type="number" class="form-control" id="net_export" placeholder="Net Export">
                         </div>
                      </div>
+
                      <div class="form-group">
                         <div class="input-group">
-                           <span class="input-group-addon">Total Interest</span>
-                           <input type="number" class="form-control" id="total-interest" disabled>
+                           <span class="input-group-addon">GDP Growth rate:</span>
+                           <input type="number" class="form-control" id="growth_rate" disabled>
                         </div>
                      </div>
                   </div>
@@ -71,6 +106,7 @@
             </div>
          </div>
       </div>
+
       <!-- Optional JavaScript -->
       <!-- jQuery first, then Popper.js, then Bootstrap JS -->
       <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
