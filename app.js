@@ -26,8 +26,6 @@ function calculateResults(){
     const growth_rate = document.getElementById('growth_rate')
     const net_export = document.getElementById('net_export');
 
-    
-
     const nexport = parseFloat(total_exports.value) - parseFloat(total_import.value);
     const spent = parseFloat(nexport.value) + parseFloat(spending.value) + parseFloat(investment.value) + parseFloat(amountconsumption.value);
     const x = parseFloat(spent.value) - parseFloat(LastYearGDP.value);
@@ -48,7 +46,6 @@ function calculateResults(){
     }else{
         showError('Please check your numbers');
     }
-
 }
 
 //Show error
